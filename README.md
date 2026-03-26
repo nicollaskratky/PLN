@@ -15,7 +15,6 @@ PLN/
 │   └── TASK_02_notebook.ipynb   # Análises avançadas
 ├── DATA/                        # CSVs do dataset
 ├── Relatórios/                  # Relatórios gerados
-├── nltk_data/                   # Dados locais do NLTK
 ├── check_env.py                 # Valida o ambiente
 ├── setup_nltk.py                # Baixa recursos NLTK
 ├── environment.yml              # Ambiente conda
