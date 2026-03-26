@@ -2,17 +2,21 @@
 
 Este repositório contém um projeto de NLP em Python com pré-processamento de texto, visualização com word clouds, similaridade e PCA (TASK 01).
 
-## Estrutura de pastas
+## Estrutura de pastas/notebooks
 
-- `TASK 01/`
-  - `imports.py`: importa bibliotecas e define variáveis globais (autores, cores, etc.)
-  - `preprocessing.py`: rotina `preprocess_text(df_fp)` para limpar, tokenizar e stemizar
-  - `visualization.py`: rotina `generate_wordclouds(df_fp)` para gerar e salvar `wordcloud` e imagens comparativas
-  - `similarity.py`, `vectorization.py`, `pca_analysis.py`: etapas do pipeline de análise (pode incluir suas próprias chamadas e relatórios)
+- `notebooks/TASK_01_notebook.ipynb`: Task 1, pipeline de pré-processamento, análise e visualização.
+- `notebooks/TASK_02_notebook.ipynb`: Task 2, análise adicional e experimentos.
 - `check_env.py`: valida se `nltk`, `spacy` e `langdetect` estão instalados e funcionando
 - `setup_nltk.py`: baixa recursos NLTK (`punkt`, `stopwords`, `rslp`, `mac_morpho`, etc.)
 - `enviroment.yml`: ambiente conda
 - `DATA/`: dados (csvs) usados no projeto
+
+### Código de suporte
+
+- `TASK 01/imports.py`: importa bibliotecas e define variáveis globais (autores, cores, etc.)
+- `TASK 01/preprocessing.py`: rotina `preprocess_text(df_fp)` para limpar, tokenizar e stemizar
+- `TASK 01/visualization.py`: rotina `generate_wordclouds(df_fp)` para gerar e salvar `wordcloud` e imagens comparativas
+- `TASK 01/similarity.py`, `TASK 01/vectorization.py`, `TASK 01/pca_analysis.py`: etapas do pipeline de análise (pode incluir suas próprias chamadas e relatórios)
 
 ## Ambiente Python
 
