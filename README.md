@@ -6,13 +6,15 @@ Projeto de análise de texto em Python aplicado a poemas em português, desenvol
 
 [Poems in Portuguese](https://www.kaggle.com/datasets/oliveirasp6/poems-in-portuguese) — disponível no Kaggle.
 
+[Complete literary works of Fernando Pessoa](https://www.kaggle.com/datasets/luisroque/the-complete-literary-works-of-fernando-pessoa) — disponível no Kaggle.
+
 ## Estrutura do repositório
 
 ```
 PLN/
 ├── notebooks/
-│   ├── TASK_01_notebook.ipynb   # Pipeline principal
-│   └── TASK_02_notebook.ipynb   # Análises avançadas
+│   ├── TASK_01_notebook.ipynb   # Análise focada em Fernando Pessoa e seu Heterônimos
+│   └── TASK_02_notebook.ipynb   # Análises comparativas de NLTK vs spaCy
 ├── DATA/                        # CSVs do dataset
 ├── Relatórios/                  # Relatórios gerados
 ├── check_env.py                 # Valida o ambiente
@@ -24,41 +26,75 @@ PLN/
 
 ## Instalação
 
-1. Instale [Anaconda](https://www.anaconda.com/) ou Miniconda.
-
-2. Crie e ative o ambiente:
-
+**Windows:**
 ```bash
-conda env create -f environment.yml
+install.bat
+```
+
+**Linux/Mac:**
+```bash
+bash install.sh
+```
+
+O script cria o ambiente conda, instala as dependências, baixa o modelo do spaCy e os recursos do NLTK automaticamente.
+
+## Início Rápido
+
+### Pré-requisitos
+
+- Python 3.10 ou superior
+- Conda instalado
+- Git instalado
+
+### Instalação
+
+**Windows:**
+```bash
+install.bat
+```
+
+**Linux/Mac:**
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+O script vai:
+1. ✓ Criar ambiente conda `pln`
+2. ✓ Ativar ambiente
+3. ✓ Instalar todas as dependências do `environment.yml`
+4. ✓ Baixar modelo spaCy `pt_core_news_sm`
+5. ✓ Executar `setup_nltk.py` (baixa recursos NLTK)
+6. ✓ Executar `check_env.py` (verifica se tudo funcionou)
+
+### Verificar Instalação (após completar)
+
+Se quiser verificar novamente posteriormente:
+
+```powershell
 conda activate pln
-pip install spacy langdetect kagglehub
-python -m spacy download pt_core_news_sm
-```
-
-3. Baixe os recursos do NLTK:
-
-```bash
-python setup_nltk.py
-```
-
-4. Verifique o ambiente:
-
-```bash
 python check_env.py
 ```
 
-## Como executar
+Esperado:
+```
+Teste langdetect: pt
+NLTK OK
+spaCy OK
+Ambiente pronto
+```
 
-Abra os notebooks na ordem:
+## Como Executar
 
-1. `TASK_01_notebook.ipynb` — pipeline de pré-processamento e análise inicial
-2. `TASK_02_notebook.ipynb` — análises avançadas e comparativo entre autores
+### Notebooks (Recomendado)
 
-## Dependências principais
+```powershell
+conda activate pln
+jupyter notebook notebooks/TASK_01_notebook.ipynb
+```
 
-- Python 3.x
-- NLTK
-- spaCy + modelo `pt_core_news_sm`
-- pandas
-- matplotlib
-- kagglehub
+ou
+
+```powershell
+jupyter notebook notebooks/TASK_02_notebook.ipynb
+```
