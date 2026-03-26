@@ -16,6 +16,7 @@ PLN/
 │   ├── TASK_01_notebook.ipynb   # Análise focada em Fernando Pessoa e seu Heterônimos
 │   └── TASK_02_notebook.ipynb   # Análises comparativas de NLTK vs spaCy
 ├── DATA/                        # CSVs do dataset
+├── imagens/                     # Imagens geradas no dataset
 ├── Relatórios/                  # Relatórios gerados
 ├── check_env.py                 # Valida o ambiente
 ├── setup_nltk.py                # Baixa recursos NLTK
